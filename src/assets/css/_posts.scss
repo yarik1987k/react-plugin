@@ -1,0 +1,141 @@
+@import 'vars';
+
+.eight29-posts-container {
+  flex: 1;
+  padding: 0;
+}
+
+.eight29-loading {
+  z-index: -1;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  transition: 0.3s all;
+}
+
+.eight29-posts {
+  display: grid;
+  grid-gap: var(--space-2);
+  margin-bottom: var(--space-2);
+  position: relative;
+  transition: 0.3s opacity;
+
+  &.loading-active {
+    opacity: 0;
+  }
+}
+
+.eight29-post {
+  display: flex;
+
+  &.eight29-post-list {
+    flex-wrap: wrap;
+
+    .eight29-featured-image {
+      margin-bottom: var(--space);
+
+      img {
+        max-width: 200px;
+      }
+    }
+
+    .eight29-post-body {
+      width: 100%;
+    }
+  }
+
+  &.eight29-post-card {
+    flex-direction: column;
+
+    .eight29-post-body {
+      flex-direction: column;
+    }
+
+    .eight29-featured-image {
+      margin-bottom: var(--space);
+    }
+  }
+
+  .eight29-post-body {
+    flex: 1;
+    display: flex;
+
+    div:empty {
+      display: none;
+    }
+  }
+
+  .eight29-post-title {
+    margin: 0 0 calc(var(--space) + var(--space-half)) 0;
+    font-size: 26px;
+  }
+}
+
+.eight29-post-detail {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+
+  > :first-child {
+    margin-right: var(--space);
+  }
+}
+
+.eight29-post-categories {
+  margin-bottom: var(--space);
+  font-size: 14px;
+
+  > :not(:last-child) {
+    margin-right: var(--space-half);
+  }
+}
+
+.eight29-post-staff {
+  .eight29-post-title {
+    font-size: 20px;
+    margin-bottom: var(--space-half);
+  }
+
+  .eight29-post-categories,
+  .eight29-post-detail {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.no-results {
+  .c-btn-wrapper {
+    display: inline-block;
+    margin: 0 0 0 var(--space);
+  }
+}
+
+@media only screen and (min-width: $lg) {
+  .eight29-posts {
+    grid-template-columns: repeat(var(--posts-per-row), 1fr);
+    grid-column-gap: var(--space-2);
+    grid-row-gap: var(--space-4);
+  }
+}
+
+@media only screen and (min-width: $sm) {
+  .eight29-post {
+    &.eight29-post-list {
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        .eight29-featured-image {
+          margin-right: var(--space);
+          margin-bottom: 0;
+        }
+
+        .eight29-post-body {
+          width: auto;
+        }
+      }
+  }
+}

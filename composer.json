@@ -1,0 +1,8 @@
+{
+    "name": "eight29/eight29-filters-react",
+    "version": "3.0.5",
+    "type": "wordpress-plugin",
+    "require": {
+        "composer/installers": "^1.0"
+    }
+}

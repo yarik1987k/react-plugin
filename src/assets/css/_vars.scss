@@ -1,0 +1,27 @@
+$lg: 992px;
+$sm: 480px;
+
+:root {
+  //Size / Spacing
+  --space: 16px;
+  --space-quarter: calc(var(--space) / 4);
+  --space-half: calc(var(--space) / 2);
+  --space-2: calc(var(--space) * 2);
+  --space-3: calc(var(--space) * 3);
+  --space-4: calc(var(--space) * 4);
+  --space-5: calc(var(--space) * 5);
+  --space-6: calc(var(--space) * 6);
+  --space-7: calc(var(--space) * 7);
+  --space-8: calc(var(--space) * 8);
+  --simplebar-height: 100px;
+  --filter-input-height: 48px;
+
+  //Colors
+  --black:	hsl(0, 0%, 0%);
+  --white: 	hsl(0, 0%, 100%);
+  --purple: hsl(265, 100%, 47%);
+  --light-gray: hsl(0, 0%, 94%);
+  --border-color:	hsl(0, 0%, 70%);
+  --active-button-group-color: var(--purple);
+  --current-pagination-color: hsl(0, 0%, 80%);
+}

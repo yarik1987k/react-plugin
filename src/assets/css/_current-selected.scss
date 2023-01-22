@@ -1,0 +1,37 @@
+@import 'vars';
+
+.eight29-filters .eight29-current-selected {
+  width: 100%;
+  padding: 0;
+  margin-bottom: var(--space-2);
+
+  &:empty {
+    display: none;
+  }
+
+  > li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 var(--space-half) var(--space-half) 0;
+
+    &::before {
+      display: none;
+    }
+
+    button {
+      &::after { 
+        content: '';
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: url(assets/images/cancel.svg) no-repeat;
+        background-size: 10px 10px;
+        margin-left: var(--space-half);
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
